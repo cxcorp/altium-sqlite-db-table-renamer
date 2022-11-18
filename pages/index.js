@@ -101,7 +101,10 @@ const Db = ({ db, onNewDbExported }) => {
       const result = db.exec(
         "SELECT name FROM sqlite_schema WHERE type = 'table' AND name NOT LIKE 'sqlite_%'"
       );
-      const names = result[0].values.map((v) => v[0]).flat();
+      const names = result[0].values
+        .map((v) => v[0])
+        .flat()
+        .sort((a, b) => a.localeCompare(b));
       console.log("get tables", names);
 
       setTableNames(names);
