@@ -254,7 +254,7 @@ export default function Index() {
           {db && <Db db={db} onNewDbExported={handleDbExported} />}
         </main>
 
-        <footer>
+        <footer className={styles.footer}>
           <a
             href="https://github.com/cxcorp/altium-sqlite-db-table-renamer"
             rel="noopener noreferrer"
