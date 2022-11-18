@@ -127,3 +127,30 @@
     filter: invert(1);
   }
 }
+
+.sortable_container {
+  padding: 0;
+}
+
+.sortable_table_item {
+  cursor: pointer;
+  list-style: none;
+  margin: 0.1rem 0;
+  padding: 0.2rem 0.5rem;
+
+  border: 3px solid #222;
+  border-radius: 5px;
+
+  user-select: none;
+}
+
+.dropzone.dropzone__active {
+  border-color: #0070f3;
+}
+
+.dropzone {
+  border: 3px dashed #222;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  margin: 0.1rem 0;
+}
