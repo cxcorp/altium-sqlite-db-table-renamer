@@ -85,7 +85,7 @@ const SortableTableItem = ({ id, displayName, index }) => {
       {...attributes}
       {...listeners}
     >
-      {index.toString().padStart(3, "0")}
+      {(index + 1).toString().padStart(3, "0")}
       {" - "}
       {displayName}
     </li>
@@ -124,7 +124,9 @@ const Db = ({ db, onNewDbExported }) => {
     const tableMapping = tableNames
       .map((oldTableName, newIndex) => {
         const justName = oldTableName.replace(/^\d+ - /, "");
-        const newName = `${newIndex.toString().padStart(3, "0")} - ${justName}`;
+        const newName = `${(newIndex + 1)
+          .toString()
+          .padStart(3, "0")} - ${justName}`;
 
         return [oldTableName, newName];
       })
